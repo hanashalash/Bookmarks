@@ -1,0 +1,103 @@
+html {
+  background: #090d00;
+}
+
+body {
+  background-color: transparent !important;
+}
+
+:root {
+  --secondColor: 109, 27, 89;
+}
+
+/* BACKGROUND */
+
+#bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+#bg canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* MAIN DOC */
+
+::selection {
+  background-color: rgba(var(--secondColor), 0.8);
+}
+
+.pacifico-regular {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.header {
+  font-size: 50px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  position: relative;
+  z-index: 2;
+}
+
+.header::before {
+  content: "";
+  background-color: rgb(var(--secondColor));
+  position: absolute;
+  top: 70;
+  bottom: 0;
+  left: 15%;
+  z-index: -1;
+  width: 70%;
+  height: 10%;
+  opacity: 0.8;
+  transition: all 350ms;
+}
+
+.header:hover::before {
+  height: 80%;
+}
+
+.secondary-title {
+  background-image: linear-gradient(
+    to right,
+    rgb(255, 255, 255),
+    rgb(var(--secondColor))
+  );
+  color: transparent;
+  background-clip: text;
+  border-top: 1px dashed rgb(145, 145, 145);
+  margin-top: 40px;
+}
+
+button .sub {
+  cursor: pointer;
+  color: rgb(var(--secondColor)) !important;
+}
+
+.form-control:focus {
+  border-color: rgb(var(--secondColor)) !important;
+  box-shadow: 0 0 0 0.25rem rgba(var(--secondColor), 0.4) !important;
+}
+
+.inputFields {
+  border-bottom: 1px dashed rgb(145, 145, 145);
+}
+
+table tr {
+  vertical-align: middle; 
+}
+
+table th, .comment{
+  color: rgb(var(--secondColor)) !important;
+
+}
+
